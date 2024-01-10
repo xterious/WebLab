@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title> Js pgm 5 </title>
+	</head>
+	<style>
+		body{
+			margin:20px;
+		}
+		label{
+			display:block;
+			margin:8px;
+		}
+		input{
+			width:100%;
+			padding:8px;
+			margin-bottom:10px;
+		}	
+		div{
+			width:25%;
+			display:flex;
+			gap:4px;
+		}
+		div input{
+			width: 25%;
+		}
+	</style>
+	<script>
+		function multiplyBy() {
+			num1 = document.getElementById("num1").value;
+			num2 = document.getElementById("num2").value;
+			document.getElementById("result").innerHTML = num1*num2;
+
+		}
+		function divideBy() {
+			num1 = document.getElementById("num1").value;
+			num2 = document.getElementById("num2").value;
+			document.getElementById("result").innerHTML = num1/num2;
+		}
+	</script>
+	<body>
+		<form action="#" method="post">
+			<label for="num1">Number 1: </label>
+			<input type="text" id="num1" name="number 1" placeholder="1" required>
+			<label for="num2">Number 2: </label>
+			<input type="text" id="num2" name="number 2" placeholder="2" required>
+			<div>
+			<input type="button" onClick = multiplyBy() value="multiply"/>
+			<input type="button" onClick = divideBy() value="divide"/>
+			</div>
+		</form>
+		<p> Result is:
+		<span id="result"></span>
+		</p>
+	</body>
+</html>
+
+		
